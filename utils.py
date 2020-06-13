@@ -211,7 +211,7 @@ def load(filepath):
 
         SUBSETS = ('small', 'medium', 'large')
         tracks['set', 'subset'] = tracks['set', 'subset'].astype(
-                'category', categories=SUBSETS, ordered=True)
+                pd.api.types.CategoricalDtype(categories=SUBSETS, ordered=True))
 
         COLUMNS = [('track', 'license'), ('artist', 'bio'),
                    ('album', 'type'), ('album', 'information')]
